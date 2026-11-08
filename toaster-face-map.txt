@@ -1,0 +1,38 @@
+TOASTER FACE — SPRITE SHEET MAP
+
+Per-face size: 32 x 16 logical pixels. On the recommended OLED that is the full 128 x 64 screen,
+with each logical pixel drawn as a solid 4 x 4 block. Colour: cyan #31D8FF on true black.
+
+Grid: 5 columns (mouths, left to right) x 6 rows (eyes, top to bottom) = 30 combos.
+Index = row x 5 + column.  Cell (col,row) starts at x = col x cell_w, y = row x cell_h in the clean sheets.
+
+COLUMNS — mouths (all 5 are in your video):
+  col 0: FLAT
+  col 1: SMILE
+  col 2: SMALL-O
+  col 3: BIG-O
+  col 4: WIDE-TALK
+
+ROWS — eyes:
+  row 0: OPEN  (in the video — the only eye shape it uses)
+  row 1: BLINK  (added by me, same style, so the face can blink/look/emote)
+  row 2: HAPPY  (added by me, same style, so the face can blink/look/emote)
+  row 3: LOOK-L  (added by me, same style, so the face can blink/look/emote)
+  row 4: LOOK-R  (added by me, same style, so the face can blink/look/emote)
+  row 5: HALF  (added by me, same style, so the face can blink/look/emote)
+
+INDEX TABLE (row = eyes, col = mouth):
+  #00 OPEN/FLAT  #01 OPEN/SMILE  #02 OPEN/SMALL-O  #03 OPEN/BIG-O  #04 OPEN/WIDE-TALK
+  #05 BLINK/FLAT  #06 BLINK/SMILE  #07 BLINK/SMALL-O  #08 BLINK/BIG-O  #09 BLINK/WIDE-TALK
+  #10 HAPPY/FLAT  #11 HAPPY/SMILE  #12 HAPPY/SMALL-O  #13 HAPPY/BIG-O  #14 HAPPY/WIDE-TALK
+  #15 LOOK-L/FLAT  #16 LOOK-L/SMILE  #17 LOOK-L/SMALL-O  #18 LOOK-L/BIG-O  #19 LOOK-L/WIDE-TALK
+  #20 LOOK-R/FLAT  #21 LOOK-R/SMILE  #22 LOOK-R/SMALL-O  #23 LOOK-R/BIG-O  #24 LOOK-R/WIDE-TALK
+  #25 HALF/FLAT  #26 HALF/SMILE  #27 HALF/SMALL-O  #28 HALF/BIG-O  #29 HALF/WIDE-TALK
+
+FILES:
+  toaster-face-spritesheet-labelled.png        — labelled sheet, read this one first
+  toaster-face-spritesheet-32x16.png           — clean sheet at native 32x16 per face (160x96 total)
+  toaster-face-spritesheet-32x16-transparent.png — same, transparent background, cyan pixels only
+  toaster-face-spritesheet-128x64-cyan.png     — clean sheet at full OLED size, 128x64 per face (640x384)
+  toaster-face-spritesheet-128x64-white.png    — same in white, for 1-bit / monochrome import
+  toaster_faces.h                              — Arduino bitmaps of just the 5 video faces, ready for drawBitmap()

@@ -2,7 +2,7 @@
 # Install a LaunchAgent so toaster-face starts at login. Run ./install-login.sh uninstall to remove.
 set -e
 DIR="$(cd "$(dirname "$0")" && pwd)"
-LABEL=com.juleah.toaster-face
+LABEL=com.mombotro.toaster-face
 PLIST="$HOME/Library/LaunchAgents/$LABEL.plist"
 UID_=$(id -u)
 launchctl bootout "gui/$UID_/$LABEL" 2>/dev/null || true
